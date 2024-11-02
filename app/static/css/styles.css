@@ -1,0 +1,315 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Color Scheme */
+:root {
+    --primary-color: #35424a;
+    --secondary-color: #467f8b;
+    --accent-color: #ffffff;
+    --hover-color: #5a9cac;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+}
+
+/* General Styles */
+/* Body Styling with Blended Tricolor Background */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--background-color);
+    background-image: linear-gradient(
+        to bottom, 
+        #FF9933,    /* Saffron at the top */
+        #FFD480,    /* Blended Saffron-White */
+        #FFFFFF,    /* White in the middle */
+        #B8E6B8,    /* Blended White-Green */
+        #138808     /* Green at the bottom */
+    );
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    background-size: cover;
+    animation: waving 2s infinite ease-in-out; /* Animation for waving effect */
+}
+
+/* Waving Animation */
+@keyframes waving {
+    0% { background-position: 0% 0%; }
+    25% { background-position: 10% 5%; }
+    50% { background-position: 0% 10%; }
+    75% { background-position: -10% 5%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+/* Headings */
+h1 {
+    color: #FF9933;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+p {
+    color: #138808;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+
+/* Navigation Bar */
+nav {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+}
+
+/* Buttons */
+button, input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+button:active, input[type="submit"]:active {
+    background-color: var(--hover-color);
+    transform: translateY(0);
+}
+
+button:disabled, input[type="submit"]:disabled {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Additional Button Styles */
+.button-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.button-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Forms */
+form {
+    background: #ffffff;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+    input[type="text"], input[type="password"], input[type="number"], select, textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    form input[type="submit"] {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 15px;
+    font-size: 16px;
+    text-align: left;
+}
+
+td {
+    padding: 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e3f2fd;
+}
+
+/* Responsive Table for Mobile */
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 10px;
+    }
+}
+/* Make tables horizontally scrollable */
+@media (max-width: 600px) {
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Mobile and Tablet Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Navigation */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    /* Buttons */
+    button, input[type="submit"] {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    /* Forms */
+    form {
+        padding: 20px;
+        box-shadow: none;
+    }
+    
+    /* Table Styling */
+    table, th, td {
+        font-size: 13px;
+    }
+    
+    th, td {
+        padding: 8px;
+    }
+    
+    /* Alerts */
+    .alert {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Alerts */
+.alert {
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}

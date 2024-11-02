@@ -1,0 +1,17 @@
+<!-- app/templates/register.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<h1>Register</h1>
+<form method="POST" action="{{ url_for('main.register') }}">  <!-- Updated to include 'main.' -->
+    <label for="username">Username:</label>
+    <input type="text" name="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <br>
+    <input type="submit" value="Register">
+</form>
+{% endblock %}

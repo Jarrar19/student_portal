@@ -1,0 +1,23 @@
+<!-- app/templates/edit_student.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Edit Student{% endblock %}
+
+{% block content %}
+<h1>Edit Student</h1>
+<form method="POST" action="{{ url_for('main.edit_student', student_id=student.id) }}">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="{{ student.name }}" required>
+    <br>
+    <label for="age">Age:</label>
+    <input type="number" name="age" value="{{ student.age }}" required>
+    <br>
+    <label for="usn">USN:</label>
+    <input type="text" name="usn" value="{{ student.usn }}" required>
+    <br>
+    <label for="attendance">Attendance:</label>
+    <input type="text" name="attendance" value="{{ student.attendance }}" required>
+    <br>
+    <input type="submit" value="Update Student">
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+<!-- app/templates/login.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<h1>Login</h1>
+<form method="POST" action="{{ url_for('main.login') }}">
+    <label for="username">Username:</label>
+    <input type="text" name="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+    <br>
+    <input type="submit" value="Login">
+</form>
+{% endblock %}
